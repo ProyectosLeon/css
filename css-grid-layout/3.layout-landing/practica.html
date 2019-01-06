@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Platzi</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <style>
+        body {
+            margin: 0px;
+            color: white;
+            font-family: 'Lato', sans-serif;
+        }
+        
+        .hero {
+            display: grid;
+            grid-template-columns: minmax(auto, 1024px);
+            background-color: #23475b;
+            justify-content: center;
+            /* grid-gap: 5px; */
+        }
+        
+        .hero-container {
+            margin: 30px;
+            display: grid;
+            grid-template-columns: 70px 1fr 320px;
+            grid-gap: 10px;
+        }
+        
+        .badge img {
+            max-width: 100%;
+        }
+        
+        .form {
+            background-color: #e9edef;
+            border-radius: 5px;
+            grid-column: 3 / 3;
+            grid-row: 1 / span 3
+        }
+        
+        .description {
+            grid-column-start: 2;
+        }
+        
+        .countdown {
+            grid-column: 1 / span 2;
+            text-align: center;
+        }
+        
+        .countdown span {
+            font-size: 30px;
+            font-weight: normal;
+        }
+        
+        .countdown span:after {
+            content: " :";
+        }
+        
+        .countdown span:last-child::after {
+            display: none;
+        }
+        
+        .form {
+            color: black;
+            text-align: center;
+            /*display: flex;
+            flex-direction: column;
+            justify-content: center;*/
+            display: block;
+            padding: 20px;
+        }
+        
+        .form input {
+            width: 100%;
+            border: 1px solid gainsboro;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            margin-bottom: 5px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        
+        .form button {
+            display: block;
+            margin: 0 auto;
+            background-color: #98ca3f;
+            border: 1px solid transparent;
+            height: 40px;
+            width: 200px;
+        }
+        
+        .form p {
+            font-size: 20px;
+        }
+        
+        .countdown p {
+            margin: 0px;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .hero {
+                /* margin: 30px 10px; */
+            }
+            .hero-container {
+                grid-template-columns: 70px 1fr;
+            }
+            .form {
+                grid-column: 1 / span 2;
+                grid-row: 3 / span 1;
+            }
+            .description {
+                grid-column-start: span 2;
+                /* background-color: #e9edef; */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <div class="hero-container">
+            <div class="badge">
+                <img src="badge.png" alt="">
+            </div>
+            <h1 class="title">
+                Curso de React.js
+            </h1>
+            <div class="description">
+                <p>React es una de las librerías más utilizadas hoy en día para crear aplicaciones web. En este curso podrás dominar la creación de aplicaciones a través de un proyecto que te ayudará a explotar todas las capacidades de esta librería.</p>
+            </div>
+            <form action="" class="form">
+                <p>Regístrate a Platzi</p>
+                <input type="text" placeholder="Nombre">
+                <input type="email" placeholder="Correo Electrónico">
+                <button type="submit">Comienza ahira</button>
+            </form>
+            <div class="countdown">
+                <p>Lanzamiento:</p>
+                <p>
+                    <span>01d</span>
+                    <span>03h</span>
+                    <span>09m</span>
+                    <span>05s</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
